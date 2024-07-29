@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ID Card</title>
+    <title>RUPP ID E-Card</title>
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Battambang&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -20,8 +18,11 @@
                 <img class="IdCard" src="/img/rupp.svg" alt="image">
                 <div class="top">
                     <div class="profile-user">
-                        <!-- <img src="/img/10298.jpg" class="card-img-top" alt="image"> -->
-                        <img src="http://staff-system.rupp.edu.kh/<%= data.image %>" class="card-img-top" alt="image">
+                        <% if (data.image) { %>
+                            <img src="http://staff-system.rupp.edu.kh/<%= data.image %>" class="card-img-top" alt="image">
+                        <% } else { %>
+                            <img src="https://ui-avatars.com/api/?name=<% first_name %/>+<% last_name %/>" class="card-img-top" alt="default image">
+                        <% } %>
                     </div>
                 </div>
                 <div class="ename">
