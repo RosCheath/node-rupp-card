@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff ID</title>
+    <title>ID Card</title>
     <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
-    <div class="section-header"></div>
-    <div class="section-content">
-        <p><%= data.name %></p>
-       <p> <%= data.salutation %>
-        <%= data.employee_name %> </p>
-        <p>Department: <%= data.department %></p>
-        <p>designation: <%= data.designation %></p>
-    </div>
-    <div class="section-footer"></div>
-</body>
 
+<div class="zoom-container">
+
+    <div class="container">
+        <div class="padding">
+            <div class="IdCard">
+                <img class="IdCard" src="/img/rupp.svg" alt="image">
+                <div class="top">
+                    <div class="profile-user">
+                        <!-- <img src="/img/10298.jpg" class="card-img-top" alt="image"> -->
+                        <img src="http://staff-system.rupp.edu.kh/<%= data.image %>" class="card-img-top" alt="image">
+                    </div>
+                </div>
+                <div class="ename">
+                    <h4 class="department-font"><%= data.custom_place_of_work %></h4>
+                    <div class="position">
+                        <h4 class="name-font"><%= data.custom_khmer_name %></h4>
+                        <img class="verify-badge" src="/img/approved.png" alt="verify">
+                    </div>
+                    <h4><%= data.custom_position %></h4>
+                </div>
+                <div class="edetails">
+                    <h5 class="user-info">ភេទ៖ <b><%= data.gender %></b></h5>
+                    <h5 class="user-info">តួនាទី៖ <b>បុគ្គលិកក្របខណ្ណ</b></h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+</body>
 </html>
