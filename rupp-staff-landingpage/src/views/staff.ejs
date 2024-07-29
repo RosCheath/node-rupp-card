@@ -33,8 +33,10 @@
                     <h4><%= data.custom_position %></h4>
                 </div>
                 <div class="edetails">
-                    <h5 class="user-info">អត្តលេខ៖<b><%= data.custom_rupp_id %></b></h5>
-                    <h5 class="user-info">ភេទ <bt>៖</bt> <b><%= data.gender %></b></h5>
+                        <div>
+                           <h5 class="user-info" id="user-id">អត្តលេខ<b class="b-user-id">៖</b> <%= data.custom_rupp_id %></h5>
+                         <h5 class="user-info" id="user-gender">ភេទ <b class="b-user-gender">៖</b> <%= data.gender %></h5>
+                        </div>
                 </div>
             </div>
         </div>
