@@ -8,6 +8,11 @@
     font-family: 'Khmer OS Muol';
     src: url(/fonts/KhmerOSMoul.ttf);
 }
+
+:root {
+    --letter-spacing: 0px; /* Default letter-spacing */
+}
+
 * {
     font-family: "Khmer OS Battambang", serif, "Khmer OS Moul";
     margin: 00px;
@@ -27,6 +32,30 @@
     margin: 0px;
     padding: 00px;
     overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --letter-spacing: -1px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    :root {
+        --letter-spacing: -1px;
+    }
+}
+.department-font {
+    letter-spacing: var(--letter-spacing);
+    max-width: 100%;
+}
+
+.b-user-id {
+    padding-left: 6.5px;
+}
+
+.b-user-gender {
+    padding-left: 20px !important;
 }
 
 body {
