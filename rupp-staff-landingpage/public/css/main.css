@@ -1,7 +1,15 @@
 /* body { background-color: white; margin: 0; } */
+@font-face {
+    font-family: 'Khmer OS Battambang';
+    src: url(/fonts/KhmerOSbattambang.ttf);
+}
 
+@font-face {
+    font-family: 'Khmer OS Muol';
+    src: url(/fonts/KhmerOSMoul.ttf);
+}
 * {
-    font-family: "Battambang", serif;
+    font-family: "Khmer OS Battambang", serif, "Khmer OS Moul";
     margin: 00px;
     padding: 00px;
     overflow: hidden;
@@ -13,10 +21,9 @@
     padding: 00px;
     overflow: hidden;
 }
-
 .department-font {
-    font-family: "Battambang", serif;
-    font-size: 12px;
+    font-family: "Khmer OS Battambang", serif;
+    font-size: 10px;
     margin: 0px;
     padding: 00px;
     overflow: hidden;
@@ -128,7 +135,7 @@ body {
     }
 
     #user-gender .b-user-gender {
-        padding-left: 21px;
+        padding-left: 23px;
     }
 
 
