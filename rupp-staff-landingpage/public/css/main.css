@@ -21,7 +21,7 @@
 
 
 * {
-    font-family: "Battambang", serif, "Moul";
+    font-family: "Battambang", serif;
     margin: 00px;
     padding: 00px;
     overflow: hidden;
@@ -160,7 +160,7 @@ body {
     }
 
     #user-gender .b-user-gender {
-        padding-left: 18px;
+    padding-left: 21px;
     }
 
 

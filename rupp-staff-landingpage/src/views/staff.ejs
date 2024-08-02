@@ -29,10 +29,21 @@
                     <h4 class="department-font"><%= data.custom_position %></h4>
                 </div>
                 <div class="edetails">
-                        <div>
-                           <h5 class="user-info" id="user-id">អត្តលេខ<b class="b-user-id">៖</b> <%= data.custom_rupp_id %></h5>
-                         <h5 class="user-info" id="user-gender">ភេទ <b class="b-user-gender">៖</b> <%= data.gender %></h5>
-                        </div>
+                    <div>
+                        <h5 class="user-info" id="user-id">
+                            អត្តលេខ <b class="b-user-id">៖</b> <%= data.custom_rupp_id %>
+                        </h5>
+                            <h5 class="user-info" id="user-gender">
+                                ភេទ <b class="b-user-gender">៖</b> <%= data.gender %>
+                            </h5>
+                            <br>
+                            <h5 class="user-info">
+                                ផុតកំណត់ប្រើ <br> <span class="custom-expdate"><%= data.custom_expdate %></span>
+                            </h5>
+                       
+                    </div>
+                </div>
+                
                 </div>
             </div>
         </div>
@@ -40,6 +51,28 @@
 
 </div>
 </div>
+<script>
+    function convertDateToKhmer(dateString) {
+        const khmerNumbers = ["០", "១", "២", "៣", "៤", "៥", "៦", "៧", "៨", "៩"];
+        const khmerMonths = [
+            "១", "២", "៣", "៤", "៥", "៦",
+            "៧", "៨", "៩", "១០", "១១", "១២"
+        ];
+        
+        const date = new Date(dateString);
+        const day = date.getDate().toString().split('').map(num => khmerNumbers[parseInt(num)]).join('');
+        const month = khmerMonths[date.getMonth()];
+        const year = date.getFullYear().toString().split('').map(num => khmerNumbers[parseInt(num)]).join('');
+        
+        return `${month} / ${year}`;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const dateElement = document.querySelector('.user-info .custom-expdate');
+        const dateText = dateElement.textContent;
+        dateElement.textContent = convertDateToKhmer(dateText);
+    });
+</script>
 
 
 </body>
